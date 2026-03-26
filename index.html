@@ -1,154 +1,213 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<title>Catálogo | 3D Angels</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Impressão 3D em Indaiatuba - Sp | 3D Angels</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-<header>
-    <nav>
-        <div class="logo-container">
-            <img src="img/logo.png" class="logo-img">
-            <span class="logo-text">3D ANGELS</span>
+    <!-- Cabecalho -->
+
+    <header>
+        <nav>
+            <div class="logo-container">
+                <img src="img/logo.png" alt="Logo 3D Angels" class="logo-img">
+                <span class="logo-text">3D ANGELS</span>
+            </div>
+            <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home">Início</a></li>
+                <li><a href="catalogo.html">Catálogo</a></li>
+                <li><a href="#services">Serviços</a></li>
+                <li><a href="orcamento.html">Orçamento</a></li>
+                <li><a href="#about">Sobre</a></li>
+                <li><a href="#contact">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Seção Principal (Hero) -->
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Transforme Suas Ideias em Realidade</h1>
+            <p>Impressão 3D de alta qualidade para projetos profissionais e pessoais</p>
+            <a href="orcamento.html" class="cta-button">Solicite um Orçamento</a>
+        </div>
+    </section>
+    <!---- Frases específicas --- -->
+    <section class="highlights">
+        <div class="highlights-grid">
+            <div class="highlight-card fade-in">
+                <h3 >Prazo Médio</h3>
+                <p>48 horas para a maioria dos projetos</p>
+            </div>
+            <div class="highlight-card fade-in">
+                <h3> Localização</h3>
+                <p>Atendemos Indaiatuba e região</p>
+            </div>
+            <div class="highlight-card fade-in">
+                <h3> Materiais</h3>
+                <p>PLA e PETG</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção de Serviços -->
+
+    <section id="services" class="services">
+        <h2 class="section-title">Nossos Serviços</h2>
+        <div class="services-grid">
+            <div class="service-card fade-in">
+                <h3>Impressão 3D</h3>
+                <p>Produção de peças e protótipos com tecnologia de ponta e precisão excepcional.</p>
+            </div>
+            <div class="service-card fade-in">
+                <h3>Prototipagem</h3>
+                <p>Desenvolvimento rápido de protótipos funcionais para validação de projetos.</p>
+            </div>
+            <div class="service-card fade-in">
+                <h3>Peças Customizadas</h3>
+                <p>Criação de peças sob medida para suas necessidades específicas.</p>
+            </div>
+            <div class="service-card fade-in">
+                <h3>Presentes</h3>
+                <p> Encontre o presente ideal para quem faz a diferença.</p>
+            </div>
+            <div class="service-card fade-in">
+                <h3>Produtos Personalizados</h3>
+                <p>Itens exclusivos e personalizados para presentes e decoração.</p>
+            </div>
+            <div class="service-card fade-in">
+                <h3>Produção em Série</h3>
+                <p>Fabricação de pequenos e médios lotes com qualidade garantida.</p>
+            </div>
+        </div>
+    </section>
+
+    <!----  PORTIFOLIO ----->
+    <section class="portfolio">
+        <h2 class="section-title">Alguns Trabalhos Realizados</h2>
+        <div class="portfolio-grid">
+            <img src="img/portfolio/1.jpeg" alt="Peça impressa 3D" class="fade-in">
+            <img src="img/portfolio/2.jpeg" alt="Protótipo 3D" class="fade-in">
+            <img src="img/portfolio/3.jpeg" alt="Produto personalizado 3D" class="fade-in">
         </div>
 
-        <ul class="nav-links">
-            <li><a href="index.html">Início</a></li>
-            <li><a href="catalogo.html" class="active">Catálogo</a></li>
-            <li><a href="orcamento.html">Orçamento</a></li>
-        </ul>
-    </nav>
-</header>
+        <div class="catalogo-btn-container">
+            <a href="catalogo.html" class="cta-button">
+                Ver Catálogo Completo
+            </a>
+        </div>
+    </section>
 
+    <!-- Seção Sobre -->
+    <section id="about" class="about">
+        <div class="about-content">
+            <h2 class="section-title">Sobre a 3D Angels</h2>
+            <p>
+                Somos especialistas em impressão 3D, comprometidos em entregar soluções inovadoras 
+                e de alta qualidade para nossos clientes.
+            </p>
+            <p>
+                Com tecnologia de ponta e experiência técnica, transformamos suas ideias em objetos 
+                reais com precisão e agilidade.
+            </p>
+            <p>
+                Seja para prototipagem, produção de peças funcionais ou criação de itens 
+                personalizados, estamos prontos para atender suas necessidades.
+            </p>
+        </div>
+    </section>
 
-<section class="catalogo">
+    <!----DEPOIMENTOS -->
+    
+    <section class="testimonials">
+        <h2 class="section-title">O que nossos clientes dizem</h2>
+        <div class="testimonials-grid">
+            <div class="testimonial-card fade-in">
+                <div class="stars">★★★★★</div>
+                <p>"Entrega rápida e qualidade impecável. Recomendo demais!"</p>
+                <strong>- Marcos, Indaiatuba</strong>
+            </div>
+            <div class="testimonial-card fade-in">
+                <div class="stars">★★★★★</div>
+                <p>"Fizeram exatamente a peça que eu precisava para meu projeto."</p>
+                <strong>- Evelin, Campinas</strong>
+            </div>
+            <div class="testimonial-card fade-in">
+                <div class="stars">★★★★★</div>
+                <p>"Atendimento excelente e preço justo."</p>
+                <strong>- Rafael, Indaiatuba</strong>
+            </div>            
+        </div>
+    </section>
 
-<h2 class="section-title">Catálogo de Produtos</h2>
+    <!-- Seção de Contato -->
+    <section id="contact" class="contact">
+        <h2 class="section-title">Entre em Contato</h2>
+        <div class="contact-info">
+            <div class="contact-card fade-in">
+                <h3>WhatsApp</h3>
+                <a href="https://wa.me/5519991946309" target="_blank">(19) 99194-6309</a>
+            </div>
+            <div class="contact-card fade-in">
+                <h3>E-mail</h3>
+                <a href="mailto:angels3dstore@gmail.com">angels3dstore@gmail.com</a>
+            </div>
+        </div>
+    </section>
 
-<!-- ABAS -->
-<div class="catalogo-tabs">
-<button class="tab-btn active" onclick="trocarCategoria('utilidades', event)">Utilidades</button>
-<button class="tab-btn" onclick="trocarCategoria('decoracao', event)">Decoração / Geek</button>
-</div>
+    <section class="faq">
 
-<div class="catalogo-grid">   
+        <h2 class="section-title">Perguntas Frequentes</h2>
+        
+        <div class="faq-container">
+        
+        <div class="faq-item">
+        <h3>Preciso ter o arquivo 3D para imprimir?</h3>
+        <p>Não. Você pode enviar uma ideia, imagem ou referência que podemos ajudar na modelagem.</p>
+        </div>
+        
+        <div class="faq-item">
+        <h3>Qual o prazo de produção?</h3>
+        <p>O prazo médio é de 1 a 3 dias dependendo do tamanho da peça e quantidade.</p>
+        </div>
+        
+        <div class="faq-item">
+        <h3>Quais materiais vocês utilizam?</h3>
+        <p>Trabalhamos principalmente com PLA, PETG, ABS e TPU.</p>
+        </div>
+        
+        <div class="faq-item">
+        <h3>Vocês fazem peças personalizadas?</h3>
+        <p>Sim! Produzimos peças sob medida para projetos, reposição ou protótipos.</p>
+        </div>
+        
+        </div>
+        
+        <div class="faq-pergunta">
 
-<!-- ================= UTILIDADES ================= -->
-<div class="categoria active" id="utilidades">
+            <h3>Não encontrou sua pergunta?</h3>
+            <p>Envie sua dúvida para nós:</p>
+            
+            <input type="text" id="perguntaCliente" placeholder="Digite sua pergunta aqui...">
+            
+            <button onclick="enviarPergunta()">Enviar Pergunta</button>
+            
+            </div>
+            <script src="js/Faq.js"></script>
+        </section>
 
-<div class="produto">
-<img src="img/catalogo/SuporteCelular.png">
-<h3>Suporte para Celular</h3>
-<p>Ideal para mesa ou escritório.</p>
-<div class="produto-preco">R$ 19,90</div>
-<button onclick="pedirProduto('Suporte para Celular - R$19,90')">
-Pedir no WhatsApp
-</button>
-</div>
+    <!-- Rodapé -->
+    <footer>
+        <p>&copy; 2026 3D ANGELS. Todos os direitos reservados.</p>
+    </footer>
 
-<div class="produto">
-<img src="img/catalogo/OrganizadorDeFios.png">
-<h3>Organizador de Cabos</h3>
-<p>Organize seus cabos com facilidade.</p>
-<div class="produto-preco">R$ 9,90</div>
-<button onclick="pedirProduto('Organizador de Cabos - R$9,90')">
-Pedir no WhatsApp
-</button>
-</div>
-
-<div class="produto">
-<img src="img/catalogo/SuporteControle.png">
-<h3>Suporte para Controle</h3>
-<p>Ideal para controles de videogame.</p>
-<div class="produto-preco">R$ 35,90</div>
-<button onclick="pedirProduto('Suporte para Controle - R$35,90')">
-Pedir no WhatsApp
-</button>
-</div>
-
-</div>
-
-
-<!-- ================= DECORAÇÃO ================= -->
-<div class="categoria" id="decoracao">
-
-<div class="produto">
-
-    <div class="badge">🔥 Mais vendido</div>
-<img src="img/catalogo/PORSHE_QUADRO.jpeg">
-<h3>Quadro Porsche</h3>
-<p>Decoração perfeita para amantes de carros.</p>
-<div class="produto-preco">R$ 15,90</div>
-<button onclick="pedirProduto('Quadro Porsche - R$15,90')">
-Pedir no WhatsApp
-</button>
-</div>
-
-<div class="produto">
-<img src="img/catalogo/ELPRIMO.jpeg">
-<h3>Boneco El Primo</h3>
-<p>Perfeito para fãs de Brawl Stars.</p>
-<div class="produto-preco">R$ 49,90</div>
-<button onclick="pedirProduto('Boneco El Primo - R$49,90')">
-Pedir no WhatsApp
-</button>
-</div>
-
-<div class="produto">
-<img src="img/catalogo/DRAGAO_ARTICULADO.jpeg">
-<h3>Dragão Articulado</h3>
-<p>Ótimo presente decorativo.</p>
-<div class="produto-preco">R$ 20,90</div>
-<button onclick="pedirProduto('Dragão Articulado - R$20,90')">
-Pedir no WhatsApp
-</button>
-</div>
-
-<div class="produto">
-<img src="img/catalogo/MAE_E_FILHO.jpeg">
-<h3>Mãe e Filho</h3>
-<p>Presente especial e cheio de significado.</p>
-<div class="produto-preco">R$ 24,90</div>
-<button onclick="pedirProduto('Mãe e Filho - R$24,90')">
-Pedir no WhatsApp
-</button>
-</div>
-
-<div class="produto">
-<img src="img/catalogo/CAVEIRA_DECO.jpeg">
-<h3>Caveira Decorativa</h3>
-<p>Ideal para setups e decoração moderna.</p>
-<div class="produto-preco">R$ 27,90</div>
-<button onclick="pedirProduto('Caveira Decorativa - R$27,90')">
-Pedir no WhatsApp
-</button>
-</div>
-
-<div class="produto">
-<img src="img/catalogo/TE_AMO_DECO.jpeg">
-<h3>Decoração "Te Amo"</h3>
-<p>Mostre seu amor com estilo.</p>
-<div class="produto-preco">R$ 15,90</div>
-<button onclick="pedirProduto('Te Amo Decorativo - R$15,90')">
-Pedir no WhatsApp
-</button>
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<footer>
-<p>&copy; 2026 3D ANGELS</p>
-</footer>
-
-<script src="js/catalogo.js"></script>
+    <script src="js/main.js"></script>
 
 </body>
 </html>
+
