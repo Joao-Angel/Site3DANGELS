@@ -1,0 +1,690 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --neon-blue: #1aa7a7;
+    --dark-blue: #0e6380;
+    --black: #000000;
+    --dark-gray: #1a1a1a;
+    --light-gray: #333333;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--black);
+    color: #ffffff;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* Header */
+header {
+    background: linear-gradient(135deg, var(--black) 0%, var(--dark-gray) 100%);
+    padding: 1rem 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 20px rgba(0, 212, 255, 0.3);
+}
+
+nav {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.logo-img {
+    height: 50px;
+    filter: drop-shadow(0 0 10px var(--neon-blue));
+}
+
+.logo-text {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--neon-blue);
+    text-shadow: 0 0 10px var(--neon-blue);
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+}
+
+.nav-links a {
+    color: #ffffff;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--neon-blue);
+}
+
+/* Hero */
+.hero {
+    margin-top: 80px;
+    padding: 6rem 2rem;
+    background: linear-gradient(135deg, var(--dark-gray), var(--black));
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    color: var(--neon-blue);
+    text-shadow: 0 0 20px var(--neon-blue);
+}
+
+.hero p {
+    font-size: 1.3rem;
+    color: #ccc;
+}
+
+.cta-button {
+    display: inline-block;
+    margin-top: 2rem;
+    padding: 1rem 2.5rem;
+    background: linear-gradient(135deg, var(--neon-blue), var(--dark-blue));
+    border-radius: 50px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Sections */
+.services, .contact {
+    padding: 5rem 2rem;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    color: var(--neon-blue);
+    margin-bottom: 3rem;
+}
+
+/* Cards */
+.services-grid, .contact-info {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.service-card, .contact-card {
+    background: linear-gradient(135deg, var(--dark-gray), var(--light-gray));
+    padding: 2rem;
+    border-radius: 15px;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.service-card:hover, .contact-card:hover {
+    transform: translateY(-5px);
+}
+
+/* About */
+.about {
+    padding: 5rem 2rem;
+    background: linear-gradient(135deg, var(--dark-gray), var(--black));
+    text-align: center;
+}
+
+/* Footer */
+footer {
+    background: var(--dark-gray);
+    padding: 2rem;
+    text-align: center;
+    border-top: 2px solid var(--neon-blue);
+}
+
+/* Mobile */
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: var(--neon-blue);
+    font-size: 1.5rem;
+}
+
+@media (max-width: 768px) {
+    .menu-toggle { display: block; }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background: var(--dark-gray);
+        position: absolute;
+        width: 100%;
+        top: 100%;
+        left: 0;
+        padding: 2rem;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+}
+
+/* Animations */
+.fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: 0.6s;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Highlights */
+.highlights {
+    padding: 4rem 2rem;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.highlights-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 2rem;
+}
+
+.highlight-card {
+    background: linear-gradient(135deg, #1a1a1a, #333);
+    padding: 2rem;
+    border-radius: 15px;
+    text-align: center;
+    border: 1px solid var(--neon-blue);
+}
+
+/* Portfolio */
+.portfolio {
+    padding: 5rem 2rem;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+.portfolio-grid img {
+    width: 100%;
+    border-radius: 15px;
+    transition: 0.3s;
+}
+
+.portfolio-grid img:hover {
+    transform: scale(1.05);
+}
+
+.catalogo-btn-container{
+    display:flex;
+    justify-content:center;
+    margin-top:50px;
+    margin-bottom:20px;
+}
+
+/* Testimonials */
+.testimonials {
+    padding: 5rem 2rem;
+    background: #111;
+}
+
+.testimonials-grid {
+    max-width: 1000px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.testimonial-card {
+    background: linear-gradient(135deg, #1a1a1a, #333);
+    padding: 2rem;
+    border-radius: 15px;
+    font-style: italic;
+}
+
+/* Orçamento */
+
+.orcamento {
+    padding: 5rem 2rem;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.orcamento-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 2rem;
+}
+
+.orcamento-form {
+    background: #111;
+    padding: 2rem;
+    border-radius: 20px;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.2rem;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    padding: 0.8rem;
+    border-radius: 10px;
+    border: none;
+    background: #222;
+    color: white;
+}
+
+.form-group textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+.upload-box input {
+    border: 2px dashed #444;
+    padding: 1rem;
+    background: transparent;
+}
+
+.cta-button.full {
+    width: 100%;
+    margin-top: 1rem;
+}
+
+.orcamento-info {
+    background: linear-gradient(135deg, #1a4fff, #0033cc);
+    padding: 2rem;
+    border-radius: 20px;
+}
+
+.orcamento-info h3 {
+    margin-bottom: 1rem;
+}
+
+.orcamento-info ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.orcamento-info li {
+    margin-bottom: 0.5rem;
+}
+/* Estrela comentarios*/
+.stars {
+    color: gold;
+    font-size: 1.4rem;
+    margin-bottom: 0.5rem;
+    letter-spacing: 2px;
+}
+
+/*-- CATALOGO  --*/
+
+    
+    
+/* ================= CATALOGO ================= */
+.catalogo{
+    padding:80px 20px;
+    max-width:1200px;
+    margin:auto;
+    text-align:center;
+    }
+    
+    .catalogo .section-title{
+    font-size:32px;
+    margin-bottom:20px;
+    color:#ffffff;
+    }
+    
+    
+    /* ================= ABAS ================= */
+    .catalogo-tabs{
+    display:flex;
+    justify-content:center;
+    gap:15px;
+    margin-top:20px;
+    margin-bottom:30px;
+    flex-wrap:wrap;
+    }
+    
+    .tab-btn{
+    padding:10px 20px;
+    border:none;
+    background:#1f1f1f;
+    color:#ffffff;
+    cursor:pointer;
+    border-radius:6px;
+    font-weight:500;
+    transition:0.3s;
+    }
+    
+    .tab-btn:hover{
+    background:#333;
+    }
+    
+    .tab-btn.active{
+    background:#25D366;
+    color:#000;
+    }
+    
+    
+    /* ================= GRID ================= */
+    .catalogo-grid{
+    margin-top:20px;
+    }
+    
+    /* cada categoria vira o grid */
+    .categoria{
+    display:none;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:30px;
+    }
+    
+    .categoria.active{
+    display:grid;
+    }
+    
+    
+    /* ================= PRODUTO ================= */
+    .produto{
+    background:#1b1b1b;
+    border-radius:12px;
+    padding:20px;
+    box-shadow:0 0 10px rgba(0,0,0,0.4);
+    transition:0.3s;
+    }
+    
+    .produto:hover{
+    transform:translateY(-5px);
+    box-shadow:0 10px 20px rgba(0,0,0,0.6);
+    }
+    
+    .produto img{
+    width:100%;
+    height:200px;
+    object-fit:cover;
+    border-radius:8px;
+    margin-bottom:15px;
+    }
+    
+    .produto h3{
+    color:#ffffff;
+    font-size:18px;
+    margin-bottom:10px;
+    }
+    
+    .produto p{
+    color:#ccc;
+    font-size:14px;
+    margin-bottom:15px;
+    }
+    
+    
+    /* ================= PREÇO ================= */
+    .produto-preco{
+    color:#25D366;
+    font-size:20px;
+    font-weight:bold;
+    margin-bottom:15px;
+    }
+    
+    
+    /* ================= BOTÃO ================= */
+    .produto button{
+    background:#25D366;
+    border:none;
+    padding:10px;
+    width:100%;
+    border-radius:6px;
+    cursor:pointer;
+    font-weight:bold;
+    transition:0.3s;
+    }
+    
+    .produto button:hover{
+    background:#1ebe5d;
+    }
+/* ================= ANIMAÇÃO DAS ABAS ================= */
+.categoria{
+    opacity:0;
+    transform:translateY(10px) scale(0.98);
+    transition:opacity 0.4s ease, transform 0.4s ease;
+    position:absolute;
+    width:100%;
+    left:0;
+    top:0;
+    }
+    
+    .catalogo-grid{
+    position:relative;
+    min-height:400px;
+    }
+    
+    /* quando ativa */
+    .categoria.active{
+    opacity:1;
+    transform:translateY(0) scale(1);
+    position:relative;
+    }
+    
+    
+    /* ================= BADGE MAIS VENDIDO ================= */
+    .produto{
+    position:relative;
+    }
+    
+    .badge{
+    position:absolute;
+    top:10px;
+    left:10px;
+    background:#ff3b3b;
+    color:#fff;
+    font-size:12px;
+    padding:5px 10px;
+    border-radius:20px;
+    font-weight:bold;
+    }
+    
+    
+    /* ================= EFEITO EXTRA ================= */
+    .produto:hover{
+    transform:translateY(-6px) scale(1.02);
+    }
+    
+    
+    /* animação leve no botão */
+    .produto button{
+    transition:0.2s;
+    }
+    
+    .produto button:active{
+    transform:scale(0.95);
+}
+
+/* ================= ANIMAÇÃO DAS ABAS ================= */
+.categoria{
+opacity:0;
+transform:translateY(10px) scale(0.98);
+transition:opacity 0.4s ease, transform 0.4s ease;
+position:absolute;
+width:100%;
+left:0;
+top:0;
+}
+
+.catalogo-grid{
+position:relative;
+min-height:400px;
+}
+
+/* quando ativa */
+.categoria.active{
+opacity:1;
+transform:translateY(0) scale(1);
+position:relative;
+}
+
+
+/* ================= BADGE MAIS VENDIDO ================= */
+.produto{
+position:relative;
+}
+
+.badge{
+position:absolute;
+top:10px;
+left:10px;
+background:#ff3b3b;
+color:#fff;
+font-size:12px;
+padding:5px 10px;
+border-radius:20px;
+font-weight:bold;
+}
+
+
+/* ================= EFEITO EXTRA ================= */
+.produto:hover{
+transform:translateY(-6px) scale(1.02);
+}
+
+
+/* animação leve no botão */
+.produto button{
+transition:0.2s;
+}
+
+.produto button:active{
+transform:scale(0.95);
+}
+
+/*____________________FINAL CATALOGO________________________________ */
+
+
+/* FAQ */
+
+.faq{
+    padding:80px 20px;
+    max-width:900px;
+    margin:auto;
+    }
+    
+    .faq-container{
+    margin-top:40px;
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+    }
+    
+    .faq-item{
+    background:#1b1b1b;
+    padding:20px;
+    border-radius:10px;
+    border:1px solid rgba(255,255,255,0.08);
+    }
+    
+    .faq-item h3{
+    color:#ffffff;
+    font-size:18px;
+    margin-bottom:10px;
+    }
+    
+    .faq-item p{
+    color:#cfcfcf;
+    font-size:14px;
+    line-height:1.5;
+    }
+    
+    .faq-pergunta{
+        margin-top:40px;
+        text-align:center;
+        }
+        
+        .faq-pergunta h3{
+        color:#ffffff;
+        margin-bottom:10px;
+        }
+        
+        .faq-pergunta p{
+        color:#cfcfcf;
+        margin-bottom:15px;
+        }
+        
+        .faq-pergunta input{
+        width:100%;
+        max-width:400px;
+        padding:12px;
+        border-radius:6px;
+        border:none;
+        margin-bottom:15px;
+        }
+        
+        .faq-pergunta button{
+        background:#2e7bc4;
+        color:white;
+        border:none;
+        padding:12px 20px;
+        border-radius:6px;
+        cursor:pointer;
+        font-weight:bold;
+        }
+        
+        .faq-pergunta button:hover{
+        background:#0d2c49;
+        }
+/*--- Whatsapp float---*/
+        .whatsapp-float{
+            position:fixed;
+            bottom:25px;
+            right:25px;
+            width:60px;
+            height:60px;
+            background:#063d1a;
+            border-radius:50%;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            box-shadow:0 8px 20px rgba(0,0,0,0.3);
+            z-index:999;
+            transition:0.3s;
+            }
+            
+            .whatsapp-float img{
+            width:32px;
+            height:32px;
+            }
+            
+            .whatsapp-float:hover{
+            transform:scale(1.1);
+            }        
