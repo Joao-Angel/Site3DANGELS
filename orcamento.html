@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Solicite um Orçamento | 3D Angels</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <nav>
+        <div class="logo-container">
+            <img src="img/logo.png" alt="Logo 3D Angels" class="logo-img">
+            <span class="logo-text">3D ANGELS</span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Início</a></li>
+            <li><a href="orcamento.html" class="active">Orçamento</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section id="orcamento" class="orcamento">
+    <h2 class="section-title">Solicitar Orçamento</h2>
+
+    <div class="orcamento-container">
+        <form class="orcamento-form"
+            id="formOrcamento"
+            action="https://formsubmit.co/angels3dstore@gmail.com"
+            method="POST"
+        >
+        <input type="hidden" name="_subject" value="Novo Orçamento - 3D Angels">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_template" value="table">
+            
+            <div class="form-row">
+                <div class="form-group">
+                    <label>Nome Completo *</label>
+                    <input id="nome" name="Nome" type="text" required placeholder="Seu nome">
+                </div>
+                <div class="form-group">
+                    <label>Email *</label>
+                    <input id="email" name="Email" type="email" required placeholder="seu@email.com">
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label>Telefone</label>
+                    <input  id="telefone" name="Telefone" type="tel" placeholder="(00) 00000-0000">
+                </div>
+                <div class="form-group">
+                    <label>Quantidade</label>
+                    <input id="quantidade" name="Quantidade" type="number" value="1">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>Material Preferido</label>
+                <select id="material" name="Material">
+                    <option>Selecione o material</option>
+                    <option>PLA</option>
+                    <option>ABS</option>
+                    <option>PETG</option>
+                    <option>TPU</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>Descrição do Projeto *</label>
+                <textarea id="descricao" name="Descricao" required placeholder="Descreva dimensões, finalidade, cor, etc."></textarea>
+            </div>
+
+            <div class="form-group upload-box">
+                <label>Arquivo 3D (opcional)</label>
+                <input type="file" disabled>
+                <small>Envie o arquivo pelo WhatsApp após o contato.</small>
+            </div>
+
+            <p class="whatsapp-helper">
+                 Clique no botão abaixo e fale agora com a 3D Angels.
+            </p>
+
+            <button type="button" class="cta-button full" id="btnEnviar">
+                Enviar Solicitação
+            </button>
+        </form>
+
+        <div class="orcamento-info">
+            <h3>Dicas para seu orçamento</h3>
+            <ul>
+                <li>Informe as dimensões desejadas</li>
+                <li>Descreva a finalidade da peça</li>
+                <li>Mencione se precisa de acabamento</li>
+                <li>Envie o arquivo 3D se tiver</li>
+                <li>Indique a quantidade</li>
+            </ul>
+
+            <h3>Materiais disponíveis</h3>
+            <p><strong>PLA</strong> – Uso geral</p>
+            <p><strong>ABS</strong> – Resistente</p>
+            <p><strong>PETG</strong> – Durável</p>
+            <p><strong>TPU</strong> – Flexível</p>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <p>&copy; 2026 3D ANGELS. Todos os direitos reservados.</p>
+</footer>
+
+</body>
+</html>

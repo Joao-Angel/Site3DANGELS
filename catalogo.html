@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Catálogo | 3D Angels</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <nav>
+        <div class="logo-container">
+            <img src="img/logo.png" class="logo-img">
+            <span class="logo-text">3D ANGELS</span>
+        </div>
+
+        <ul class="nav-links">
+            <li><a href="index.html">Início</a></li>
+            <li><a href="catalogo.html" class="active">Catálogo</a></li>
+            <li><a href="orcamento.html">Orçamento</a></li>
+        </ul>
+    </nav>
+</header>
+
+
+<section class="catalogo">
+
+<h2 class="section-title">Catálogo de Produtos</h2>
+
+<!-- ABAS -->
+<div class="catalogo-tabs">
+<button class="tab-btn active" onclick="trocarCategoria('utilidades', event)">Utilidades</button>
+<button class="tab-btn" onclick="trocarCategoria('decoracao', event)">Decoração / Geek</button>
+</div>
+
+<div class="catalogo-grid">   
+
+<!-- ================= UTILIDADES ================= -->
+<div class="categoria active" id="utilidades">
+
+<div class="produto">
+<img src="img/catalogo/SuporteCelular.png">
+<h3>Suporte para Celular</h3>
+<p>Ideal para mesa ou escritório.</p>
+<div class="produto-preco">R$ 19,90</div>
+<button onclick="pedirProduto('Suporte para Celular - R$19,90')">
+Pedir no WhatsApp
+</button>
+</div>
+
+<div class="produto">
+<img src="img/catalogo/OrganizadorDeFios.png">
+<h3>Organizador de Cabos</h3>
+<p>Organize seus cabos com facilidade.</p>
+<div class="produto-preco">R$ 9,90</div>
+<button onclick="pedirProduto('Organizador de Cabos - R$9,90')">
+Pedir no WhatsApp
+</button>
+</div>
+
+<div class="produto">
+<img src="img/catalogo/SuporteControle.png">
+<h3>Suporte para Controle</h3>
+<p>Ideal para controles de videogame.</p>
+<div class="produto-preco">R$ 35,90</div>
+<button onclick="pedirProduto('Suporte para Controle - R$35,90')">
+Pedir no WhatsApp
+</button>
+</div>
+
+</div>
+
+
+<!-- ================= DECORAÇÃO ================= -->
+<div class="categoria" id="decoracao">
+
+<div class="produto">
+
+    <div class="badge">🔥 Mais vendido</div>
+<img src="img/catalogo/PORSHE_QUADRO.jpeg">
+<h3>Quadro Porsche</h3>
+<p>Decoração perfeita para amantes de carros.</p>
+<div class="produto-preco">R$ 15,90</div>
+<button onclick="pedirProduto('Quadro Porsche - R$15,90')">
+Pedir no WhatsApp
+</button>
+</div>
+
+<div class="produto">
+<img src="img/catalogo/ELPRIMO.jpeg">
+<h3>Boneco El Primo</h3>
+<p>Perfeito para fãs de Brawl Stars.</p>
+<div class="produto-preco">R$ 49,90</div>
+<button onclick="pedirProduto('Boneco El Primo - R$49,90')">
+Pedir no WhatsApp
+</button>
+</div>
+
+<div class="produto">
+<img src="img/catalogo/DRAGAO_ARTICULADO.jpeg">
+<h3>Dragão Articulado</h3>
+<p>Ótimo presente decorativo.</p>
+<div class="produto-preco">R$ 20,90</div>
+<button onclick="pedirProduto('Dragão Articulado - R$20,90')">
+Pedir no WhatsApp
+</button>
+</div>
+
+<div class="produto">
+<img src="img/catalogo/MAE_E_FILHO.jpeg">
+<h3>Mãe e Filho</h3>
+<p>Presente especial e cheio de significado.</p>
+<div class="produto-preco">R$ 24,90</div>
+<button onclick="pedirProduto('Mãe e Filho - R$24,90')">
+Pedir no WhatsApp
+</button>
+</div>
+
+<div class="produto">
+<img src="img/catalogo/CAVEIRA_DECO.jpeg">
+<h3>Caveira Decorativa</h3>
+<p>Ideal para setups e decoração moderna.</p>
+<div class="produto-preco">R$ 27,90</div>
+<button onclick="pedirProduto('Caveira Decorativa - R$27,90')">
+Pedir no WhatsApp
+</button>
+</div>
+
+<div class="produto">
+<img src="img/catalogo/TE_AMO_DECO.jpeg">
+<h3>Decoração "Te Amo"</h3>
+<p>Mostre seu amor com estilo.</p>
+<div class="produto-preco">R$ 15,90</div>
+<button onclick="pedirProduto('Te Amo Decorativo - R$15,90')">
+Pedir no WhatsApp
+</button>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<footer>
+<p>&copy; 2026 3D ANGELS</p>
+</footer>
+
+<script src="js/catalogo.js"></script>
+
+</body>
+</html>
