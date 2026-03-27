@@ -179,6 +179,19 @@ footer {
     .nav-links.active {
         display: flex;
     }
+
+    /* Orçamento mobile */
+    .orcamento-container {
+        grid-template-columns: 1fr;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+
+    .orcamento {
+        padding: 5rem 1rem;
+    }
 }
 
 /* Animations */
@@ -687,4 +700,4 @@ transform:scale(0.95);
             
             .whatsapp-float:hover{
             transform:scale(1.1);
-            }        
+            }
