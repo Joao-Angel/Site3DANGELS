@@ -10,13 +10,18 @@
 
 <header>
     <nav>
-        <div class="logo-container">
+        <div class="logo-container" onclick="window.location.href='index.html'" style="cursor:pointer;">
             <img src="img/logo.png" alt="Logo 3D Angels" class="logo-img">
             <span class="logo-text">3D ANGELS</span>
         </div>
-        <ul class="nav-links">
+        <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+        <ul class="nav-links" id="navLinks">
             <li><a href="index.html">Início</a></li>
+            <li><a href="catalogo.html">Catálogo</a></li>
+            <li><a href="index.html#services">Serviços</a></li>
             <li><a href="orcamento.html" class="active">Orçamento</a></li>
+            <li><a href="index.html#about">Sobre</a></li>
+            <li><a href="index.html#contact">Contato</a></li>
         </ul>
     </nav>
 </header>
@@ -30,10 +35,10 @@
             action="https://formsubmit.co/angels3dstore@gmail.com"
             method="POST"
         >
-        <input type="hidden" name="_subject" value="Novo Orçamento - 3D Angels">
-        <input type="hidden" name="_captcha" value="false">
-        <input type="hidden" name="_template" value="table">
-            
+            <input type="hidden" name="_subject" value="Novo Orçamento - 3D Angels">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_template" value="table">
+
             <div class="form-row">
                 <div class="form-group">
                     <label>Nome Completo *</label>
@@ -48,7 +53,7 @@
             <div class="form-row">
                 <div class="form-group">
                     <label>Telefone</label>
-                    <input  id="telefone" name="Telefone" type="tel" placeholder="(00) 00000-0000">
+                    <input id="telefone" name="Telefone" type="tel" placeholder="(00) 00000-0000">
                 </div>
                 <div class="form-group">
                     <label>Quantidade</label>
@@ -78,9 +83,7 @@
                 <small>Envie o arquivo pelo WhatsApp após o contato.</small>
             </div>
 
-            <p class="whatsapp-helper">
-                 Clique no botão abaixo e fale agora com a 3D Angels.
-            </p>
+            <p class="whatsapp-helper">Clique no botão abaixo e fale agora com a 3D Angels.</p>
 
             <button type="button" class="cta-button full" id="btnEnviar">
                 Enviar Solicitação
@@ -96,7 +99,6 @@
                 <li>Envie o arquivo 3D se tiver</li>
                 <li>Indique a quantidade</li>
             </ul>
-
             <h3>Materiais disponíveis</h3>
             <p><strong>PLA</strong> – Uso geral</p>
             <p><strong>ABS</strong> – Resistente</p>
@@ -109,6 +111,13 @@
 <footer>
     <p>&copy; 2026 3D ANGELS. Todos os direitos reservados.</p>
 </footer>
+
+<script src="js/orcamento.js"></script>
+<script>
+    function toggleMenu() {
+        document.getElementById('navLinks').classList.toggle('active');
+    }
+</script>
 
 </body>
 </html>
