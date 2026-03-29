@@ -598,6 +598,12 @@ nav {
     border-radius: 20px;
     font-weight: bold;
 }
+.preco-antigo {
+    text-decoration: line-through;
+    color: #888;
+    font-size: 14px;
+    margin-right: 6px;
+}
 
 /* ===================== WHATSAPP FLUTUANTE ===================== */
 .whatsapp-float {
