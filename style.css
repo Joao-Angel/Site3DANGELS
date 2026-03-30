@@ -183,20 +183,77 @@ nav {
     margin: auto;
 }
 
-.portfolio-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 1.5rem;
+/* Carrossel */
+.carousel-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
 }
 
-.portfolio-grid img {
+.carousel-track {
+    display: flex;
+    overflow: hidden;
+    gap: 1.2rem;
     width: 100%;
     border-radius: 15px;
+}
+
+.carousel-track img {
+    flex: 0 0 calc(33.333% - 0.8rem);
+    height: 260px;
+    object-fit: cover;
+    border-radius: 15px;
+    transition: transform 0.3s;
+}
+
+.carousel-track img:hover {
+    transform: scale(1.03);
+    box-shadow: 0 8px 24px rgba(26, 167, 167, 0.3);
+}
+
+.carousel-btn {
+    background: var(--neon-blue);
+    border: none;
+    color: white;
+    font-size: 1.4rem;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    cursor: pointer;
+    flex-shrink: 0;
+    transition: 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 14px rgba(26, 167, 167, 0.4);
+}
+
+.carousel-btn:hover {
+    background: var(--dark-blue);
+    transform: scale(1.1);
+}
+
+/* Bolinhas indicadoras */
+.carousel-dots {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 1.2rem;
+}
+
+.carousel-dots .dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #444;
+    cursor: pointer;
     transition: 0.3s;
 }
 
-.portfolio-grid img:hover {
-    transform: scale(1.05);
+.carousel-dots .dot.active {
+    background: var(--neon-blue);
+    transform: scale(1.3);
 }
 
 .catalogo-btn-container {
@@ -630,26 +687,38 @@ nav {
     position: fixed;
     bottom: 25px;
     right: 25px;
-    width: 60px;
-    height: 60px;
-    background: #063d1a;
+    width: 62px;
+    height: 62px;
+    background: #25D366;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-    z-index: 999;
+    box-shadow: 0 4px 20px rgba(37, 211, 102, 0.5);
+    z-index: 9999;
     transition: 0.3s;
-}
-
-.whatsapp-float img {
-    width: 32px;
-    height: 32px;
+    text-decoration: none;
+    animation: pulseWpp 2.5s infinite;
 }
 
 .whatsapp-float:hover {
-    transform: scale(1.1);
+    transform: scale(1.12);
+    box-shadow: 0 6px 28px rgba(37, 211, 102, 0.7);
 }
+
+.whatsapp-float svg {
+    width: 34px;
+    height: 34px;
+}
+
+@keyframes pulseWpp {
+    0%   { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.5); }
+    70%  { box-shadow: 0 0 0 12px rgba(37, 211, 102, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+}
+
+/* ===================== PORTFOLIO GRID 6 FOTOS ===================== */
+/* Carrossel já definido acima */
 
 /* ===================== ANIMAÇÕES ===================== */
 .fade-in {
@@ -761,9 +830,15 @@ footer {
         padding: 3rem 1rem;
     }
 
-    .portfolio-grid {
-        grid-template-columns: 1fr;
-        gap: 1rem;
+    .carousel-track img {
+        flex: 0 0 calc(100% - 0rem);
+        height: 220px;
+    }
+
+    .carousel-btn {
+        width: 38px;
+        height: 38px;
+        font-size: 1.1rem;
     }
 
     /* --- Sobre --- */
