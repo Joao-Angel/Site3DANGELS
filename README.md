@@ -112,6 +112,7 @@ O acesso a este repositório não concede quaisquer direitos de utilização sob
 
 ---
 
+
 ## Considerações Finais
 
 O projeto encontra-se em desenvolvimento contínuo e poderá sofrer alterações estruturais e funcionais ao longo do tempo. Novas funcionalidades serão incorporadas conforme a evolução das necessidades e objetivos do sistema.
